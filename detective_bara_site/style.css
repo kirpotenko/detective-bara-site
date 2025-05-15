@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  background-color: #0a1a2f;
+  color: #e0e6ed;
+  line-height: 1.6;
+}
+header {
+  background-color: #08111f;
+  padding: 1rem 2rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffc107;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #e0e6ed;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ffc107;
+}
+.section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+h1, h2 {
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.character {
+  background-color: #14243b;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.carousel-image {
+  display: none;
+  width: 100%;
+  border-radius: 12px;
+}
+.carousel-image.active {
+  display: block;
+  animation: fade 0.5s ease-in-out;
+}
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+footer {
+  background-color: #08111f;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #9fa7b5;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+.character img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.icon {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
